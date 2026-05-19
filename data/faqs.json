@@ -1,0 +1,1374 @@
+[
+  {
+    "question": "What is Artificial Intelligence (AI)?",
+    "answer": "Artificial Intelligence is a branch of computer science focused on building smart machines capable of performing tasks that typically require human intelligence, such as visual perception, speech recognition, decision-making, and translation between languages."
+  },
+  {
+    "question": "What is Machine Learning (ML)?",
+    "answer": "Machine Learning is a subset of artificial intelligence that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. It focuses on the development of computer programs that can access data and use it to learn for themselves."
+  },
+  {
+    "question": "What is Deep Learning?",
+    "answer": "Deep Learning is a specialized subfield of Machine Learning inspired by the structure and function of the human brain. It uses multi-layered artificial neural networks (hence the word 'deep') to model and solve complex patterns in large datasets, such as images, audio, and text."
+  },
+  {
+    "question": "What is a Neural Network?",
+    "answer": "An Artificial Neural Network (ANN) is a computational model inspired by the biological structure of human brains. It consists of interconnected nodes (neurons) organized in layers (input, hidden, and output layers) that process inputs and transmit signals to calculate complex functions."
+  },
+  {
+    "question": "What is Natural Language Processing (NLP)?",
+    "answer": "Natural Language Processing is a field of artificial intelligence that focuses on the interaction between computers and human language. It enables machines to read, understand, interpret, and generate human languages in a valuable and meaningful way."
+  },
+  {
+    "question": "What is Computer Vision?",
+    "answer": "Computer Vision is a field of artificial intelligence that trains computers to interpret and understand the visual world. Using digital images from cameras and videos, machines can accurately identify, classify, and track objects, and then react to what they see."
+  },
+  {
+    "question": "What is Supervised Learning?",
+    "answer": "Supervised Learning is a type of Machine Learning where the model is trained on a labeled dataset, meaning that each training example is paired with its correct output label. The goal is for the model to learn a mapping function to predict the output for new, unseen input data."
+  },
+  {
+    "question": "What is Unsupervised Learning?",
+    "answer": "Unsupervised Learning is a type of Machine Learning where the model is trained on an unlabeled dataset. The system tries to learn the patterns, structures, and relationships within the data without any external guidance or pre-existing output labels."
+  },
+  {
+    "question": "What is Reinforcement Learning?",
+    "answer": "Reinforcement Learning is an area of Machine Learning where an agent learns to make decisions by performing actions in an environment to maximize some notion of cumulative reward. The agent receives feedback in the form of rewards or penalties."
+  },
+  {
+    "question": "What is Overfitting and how do we prevent it?",
+    "answer": "Overfitting occurs when a machine learning model learns the training data too well, capturing noise and details that do not generalize to new data. It can be prevented using techniques like cross-validation, regularization (L1/L2), pruning, dropout layers, and gathering more training data."
+  },
+  {
+    "question": "What is Underfitting?",
+    "answer": "Underfitting occurs when a machine learning model is too simple to capture the underlying structure of the data, resulting in poor performance on both the training and the validation datasets. It can be corrected by using more complex models, engineering better features, or reducing regularization."
+  },
+  {
+    "question": "What is TF-IDF?",
+    "answer": "TF-IDF stands for Term Frequency-Inverse Document Frequency. It is a numerical statistic that reflects how important a word is to a document in a collection or corpus. It increases proportionally to the number of times a word appears in the document but is offset by the frequency of the word in the corpus."
+  },
+  {
+    "question": "What is Cosine Similarity?",
+    "answer": "Cosine Similarity is a metric used to measure how similar two vectors are. It calculates the cosine of the angle between them in a multi-dimensional space, returning a value between -1 and 1 (or 0 and 1 for positive spaces like TF-IDF). A value closer to 1 indicates higher similarity."
+  },
+  {
+    "question": "What is NLTK?",
+    "answer": "NLTK, or Natural Language Toolkit, is a leading platform for building Python programs to work with human language data. It provides user-friendly interfaces to over 50 corpora and lexical resources, along with a suite of text processing libraries for tokenization, stemming, lemmatization, and parsing."
+  },
+  {
+    "question": "What is Flask?",
+    "answer": "Flask is a lightweight and micro web framework written in Python. It is designed to make getting started quick and easy, with the ability to scale up to complex applications. It does not require particular tools or libraries, making it highly flexible for deploying web APIs and microservices."
+  },
+  {
+    "question": "What is Scikit-learn?",
+    "answer": "Scikit-learn is a free software machine learning library for the Python programming language. It features various classification, regression, and clustering algorithms, and is designed to interoperate with the Python numerical and scientific libraries NumPy and SciPy."
+  },
+  {
+    "question": "How does this Chatbot work?",
+    "answer": "This chatbot uses Natural Language Processing (NLP) to understand your question. It cleans the text, removes stopwords, lemmatizes the words, and converts it into a TF-IDF vector. It then calculates the Cosine Similarity between your query vector and all stored FAQ vectors, returning the best match if the confidence is above 25%."
+  },
+  {
+    "question": "How do I deploy a Flask application to Render?",
+    "answer": "To deploy a Flask application to Render, you need a configuration containing a WSGI server (like Gunicorn), a requirements.txt file, a runtime.txt file specifying the Python version, and a Procfile detailing the web start command: 'web: gunicorn app:app'. You then connect your GitHub repository directly to Render."
+  },
+  {
+    "question": "Why is Python popular in AI and Machine Learning?",
+    "answer": "Python is popular in AI and Machine Learning because of its simple syntax, extensive ecosystem of powerful libraries (like NumPy, Pandas, Scikit-learn, TensorFlow, PyTorch), active community support, and ease of integration with other technologies."
+  },
+  {
+    "question": "What is Data Preprocessing in NLP?",
+    "answer": "Data Preprocessing in NLP is the process of converting raw text into a clean and structured format suitable for analysis. Common steps include lowercasing, removing punctuation, tokenization (splitting text into words), stopword removal, and normalization (stemming or lemmatization)."
+  },
+  {
+    "question": "What is the difference between AI, Machine Learning, and Deep Learning?",
+    "answer": "Artificial Intelligence is the broad concept of machines acting smartly. Machine Learning is a subset of AI that allows machines to learn from data without explicit programming. Deep Learning is a subset of ML that uses deep multi-layer neural networks to solve complex problems."
+  },
+  {
+    "question": "What are Stopwords in NLP?",
+    "answer": "Stopwords are common words (like 'the', 'is', 'at', 'which', 'on') that search engines and NLP pipelines are programmed to filter out. Removing stopwords helps focus the analysis on the unique, high-value words that carry the core meaning of the text."
+  },
+  {
+    "question": "What is Lemmatization?",
+    "answer": "Lemmatization is the process of grouping together the inflected forms of a word so they can be analyzed as a single item, identified by the word's lemma or dictionary form. Unlike stemming, which simply chops off prefixes/suffixes, lemmatization considers the context and grammatical meaning of the word."
+  },
+  {
+    "question": "What is a Large Language Model (LLM)?",
+    "answer": "A Large Language Model (LLM) is an advanced AI system trained on vast amounts of text data using deep learning techniques, specifically transformers. LLMs can understand, generate, and interact using human language with high fluency."
+  },
+  {
+    "question": "What is Generative AI?",
+    "answer": "Generative AI is a branch of artificial intelligence focused on creating new content, such as text, images, audio, and code. It uses models like GANs, VAEs, and Transformers to learn patterns from existing data and generate original outputs."
+  },
+  {
+    "question": "What is Prompt Engineering?",
+    "answer": "Prompt Engineering is the practice of designing and refining inputs (prompts) given to Generative AI models to elicit specific, high-quality, and accurate responses. It is a crucial skill for interacting effectively with Large Language Models."
+  },
+  {
+    "question": "What is the difference between Classification and Regression?",
+    "answer": "In Supervised Learning, Classification is used to predict discrete, categorical labels (e.g., spam or not spam, dog or cat), while Regression is used to predict continuous, numerical values (e.g., house prices, temperature)."
+  },
+  {
+    "question": "What is a Confusion Matrix?",
+    "answer": "A Confusion Matrix is a table used to evaluate the performance of a classification algorithm. It compares the predicted classifications against the actual true labels, showing true positives, true negatives, false positives, and false negatives."
+  },
+  {
+    "question": "What is an API?",
+    "answer": "An Application Programming Interface (API) is a set of rules and protocols that allows different software applications to communicate with each other. It enables developers to access functionalities or data from external services seamlessly."
+  },
+  {
+    "question": "Who created this Chatbot?",
+    "answer": "This intelligent FAQ Chatbot was developed by Sahith Sai Pasupula as part of the CodeAlpha Internship Program. It demonstrates skills in Python, Flask, NLP, and modern frontend web development."
+  },
+  {
+    "question": "What technologies power this website?",
+    "answer": "This website is powered by a Flask (Python) backend, using NLTK and Scikit-learn for Natural Language Processing (TF-IDF & Cosine Similarity). The frontend utilizes HTML5, Vanilla JavaScript, and advanced CSS3 Glassmorphism UI techniques."
+  },
+  {
+    "question": "What is a Transformer model?",
+    "answer": "A Transformer is a deep learning architecture introduced in the paper 'Attention Is All You Need' (2017). It relies entirely on self-attention mechanisms to draw global dependencies between input and output, enabling highly parallelized training. Transformers are the foundation of modern LLMs like GPT and BERT."
+  },
+  {
+    "question": "What is a GAN (Generative Adversarial Network)?",
+    "answer": "A GAN is a deep learning framework where two neural networks — a Generator and a Discriminator — compete against each other. The Generator creates fake data to fool the Discriminator, while the Discriminator tries to distinguish real from fake. This adversarial process results in highly realistic generated outputs."
+  },
+  {
+    "question": "What is a Convolutional Neural Network (CNN)?",
+    "answer": "A Convolutional Neural Network is a class of deep neural networks most commonly applied to analyze visual imagery. It uses convolutional layers to automatically learn spatial hierarchies of features from images, making it highly effective for tasks like image classification, object detection, and facial recognition."
+  },
+  {
+    "question": "What is a Recurrent Neural Network (RNN)?",
+    "answer": "A Recurrent Neural Network is a type of neural network designed for sequential data. Unlike feedforward networks, RNNs have connections that form directed cycles, giving them memory of previous inputs. They are used in applications like speech recognition, language modeling, and time-series prediction."
+  },
+  {
+    "question": "What is LSTM?",
+    "answer": "Long Short-Term Memory (LSTM) is a special type of Recurrent Neural Network (RNN) capable of learning long-term dependencies. It solves the vanishing gradient problem of standard RNNs by using a gating mechanism (input, forget, output gates) to control what information to keep or discard across sequences."
+  },
+  {
+    "question": "What is Transfer Learning?",
+    "answer": "Transfer Learning is a machine learning technique where a model trained on one task is repurposed as the starting point for a model on a different but related task. It significantly reduces training time and data requirements by leveraging pre-learned features from large-scale datasets."
+  },
+  {
+    "question": "What is Feature Engineering?",
+    "answer": "Feature Engineering is the process of using domain knowledge to extract, transform, or create input variables (features) from raw data to improve the performance of machine learning models. Good feature engineering can dramatically boost model accuracy and reduce complexity."
+  },
+  {
+    "question": "What is Bias and Variance in Machine Learning?",
+    "answer": "Bias is the error introduced by overly simplistic assumptions in the learning algorithm, causing underfitting. Variance is the error caused by excessive sensitivity to training data fluctuations, causing overfitting. The goal is to find the right balance — known as the Bias-Variance Tradeoff."
+  },
+  {
+    "question": "What is Cross-Validation?",
+    "answer": "Cross-Validation is a statistical technique used to evaluate a machine learning model's performance by splitting the dataset into multiple subsets (folds). The model is trained on some folds and tested on the remaining fold, rotating through all folds. K-Fold Cross-Validation is the most common approach."
+  },
+  {
+    "question": "What is Regularization?",
+    "answer": "Regularization is a technique used to prevent overfitting in machine learning models by adding a penalty term to the loss function. L1 regularization (Lasso) adds the absolute value of coefficients; L2 regularization (Ridge) adds the squared value. Both discourage the model from fitting noise in training data."
+  },
+  {
+    "question": "What is a Decision Tree?",
+    "answer": "A Decision Tree is a supervised learning algorithm that splits data into branches based on feature values, forming a tree-like structure. Each internal node represents a feature test, branches represent outcomes, and leaf nodes represent class labels or values. They are highly interpretable and easy to visualize."
+  },
+  {
+    "question": "What is Random Forest?",
+    "answer": "Random Forest is an ensemble learning method that builds multiple decision trees during training and merges their outputs for more accurate and stable predictions. It reduces overfitting by introducing randomness — each tree is trained on a random subset of data and features (bagging)."
+  },
+  {
+    "question": "What is the difference between Precision and Recall?",
+    "answer": "Precision is the ratio of true positive predictions to all positive predictions made (TP / (TP + FP)). Recall (Sensitivity) is the ratio of true positives to all actual positives (TP / (TP + FN)). High precision means fewer false alarms; high recall means fewer missed detections. F1-Score is their harmonic mean."
+  },
+  {
+    "question": "What is K-Means Clustering?",
+    "answer": "K-Means is an unsupervised machine learning algorithm that partitions data into K distinct clusters. It iteratively assigns data points to the nearest cluster centroid and recalculates centroids until convergence. It is widely used for customer segmentation, image compression, and data analysis."
+  },
+  {
+    "question": "What is Principal Component Analysis (PCA)?",
+    "answer": "PCA is a dimensionality reduction technique that transforms a dataset into a new coordinate system where the axes (principal components) represent the directions of maximum variance. It reduces the number of features while retaining as much information as possible, helping speed up training and visualization."
+  },
+  {
+    "question": "What is Data Science?",
+    "answer": "Data Science is an interdisciplinary field that uses scientific methods, algorithms, and systems to extract knowledge and insights from structured and unstructured data. It combines expertise in statistics, programming (Python/R), machine learning, data visualization, and domain knowledge."
+  },
+  {
+    "question": "What is Pandas in Python?",
+    "answer": "Pandas is an open-source Python library providing high-performance, easy-to-use data structures (like DataFrames and Series) and data analysis tools. It is the most popular library for data manipulation, cleaning, transformation, and exploratory data analysis (EDA) in Python."
+  },
+  {
+    "question": "What is NumPy?",
+    "answer": "NumPy (Numerical Python) is a foundational Python library for scientific computing. It provides support for large, multi-dimensional arrays and matrices, along with a collection of high-level mathematical functions to operate on these arrays efficiently."
+  },
+  {
+    "question": "What is TensorFlow?",
+    "answer": "TensorFlow is an open-source machine learning framework developed by Google Brain. It provides a comprehensive ecosystem for building and deploying machine learning models, particularly deep neural networks. It supports GPU/TPU acceleration and is widely used in both research and production environments."
+  },
+  {
+    "question": "What is PyTorch?",
+    "answer": "PyTorch is an open-source deep learning framework developed by Facebook's AI Research Lab (FAIR). Known for its dynamic computation graph (eager execution), it is especially popular in the research community for building and experimenting with neural networks quickly and intuitively."
+  },
+  {
+    "question": "What is AI Ethics?",
+    "answer": "AI Ethics is a branch of ethics that addresses the moral implications of artificial intelligence. Key concerns include bias and fairness in AI systems, privacy and surveillance, transparency and explainability, accountability for AI decisions, and ensuring AI is developed for the benefit of all humanity."
+  },
+  {
+    "question": "What is Explainable AI (XAI)?",
+    "answer": "Explainable AI refers to techniques and methods that allow humans to understand and interpret how an AI model makes its decisions. Unlike black-box models, XAI provides transparency into the reasoning process, which is critical for high-stakes applications in healthcare, finance, and law."
+  },
+  {
+    "question": "What is a Vector Database?",
+    "answer": "A Vector Database is a specialized database designed to store and query high-dimensional vector embeddings efficiently. It is widely used in AI search, recommendation systems, and Large Language Model applications to find similar content quickly using similarity metrics like Cosine Similarity or Euclidean distance."
+  },
+  {
+    "question": "What is Retrieval-Augmented Generation (RAG)?",
+    "answer": "RAG is an AI framework that retrieves relevant documents or information from an external knowledge base (like a vector database) and passes it as context to a Large Language Model to generate highly accurate and context-aware responses, minimizing hallucinations."
+  },
+  {
+    "question": "What is Fine-Tuning in Machine Learning?",
+    "answer": "Fine-Tuning is the process of taking a pre-trained model (trained on a large general dataset) and training it further on a smaller, task-specific dataset. This adapts the model to perform highly specialized tasks while retaining its baseline intelligence."
+  },
+  {
+    "question": "What is the difference between Stemming and Lemmatization?",
+    "answer": "Stemming is a crude heuristic process that chops off the ends of words (e.g., 'studies' becomes 'studi'), whereas Lemmatization uses vocabulary and morphological analysis to return the dictionary form of a word (e.g., 'studies' becomes 'study'), preserving semantic correctness."
+  },
+  {
+    "question": "What are Word Embeddings?",
+    "answer": "Word Embeddings are dense vector representations of words in a continuous vector space where words with similar meanings are located close to each other. Popular techniques include Word2Vec, GloVe, and transformer-based contextual embeddings."
+  },
+  {
+    "question": "What is Tokenization in NLP?",
+    "answer": "Tokenization is the process of breaking a stream of text into smaller units called tokens, such as words, subwords, or characters. It is the first step in almost all Natural Language Processing pipelines."
+  },
+  {
+    "question": "What is Hyperparameter Tuning?",
+    "answer": "Hyperparameter Tuning is the process of finding the optimal set of hyperparameters (configuration settings that govern the learning process, like learning rate or batch size) to maximize a machine learning model's performance. Techniques include Grid Search, Random Search, and Bayesian Optimization."
+  },
+  {
+    "question": "What is RLHF (Reinforcement Learning from Human Feedback)?",
+    "answer": "RLHF is a method used to align Large Language Models with human values and preferences. It involves training a reward model based on human feedback (ranking model responses) and using Reinforcement Learning (PPO) to optimize the LLM to generate helpful and safe outputs."
+  },
+  {
+    "question": "What is Gradient Descent?",
+    "answer": "Gradient Descent is an optimization algorithm used to minimize the loss function of a machine learning model. It iteratively updates the model's parameters in the direction of the steepest descent (opposite to the gradient) until it reaches a local or global minimum."
+  },
+  {
+    "question": "What is a Loss Function?",
+    "answer": "A Loss Function (or cost function) is a mathematical function that measures the difference between a model's predicted output and the actual target output. The goal of training is to adjust model parameters to minimize this loss value."
+  },
+  {
+    "question": "What is Gunicorn?",
+    "answer": "Gunicorn (Green Unicorn) is a Python WSGI HTTP server for UNIX. It is designed to run Python web applications (like Flask or Django) concurrently using multiple worker processes, making it a production-ready server suitable for hosting on platforms like Render."
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "Docker is an open-source platform that automates the deployment, scaling, and management of applications by packaging them into lightweight, portable, and self-sufficient containers. Containers include the code, runtime, system tools, and libraries needed to run the app consistently on any environment."
+  },
+  {
+    "question": "What is Git?",
+    "answer": "Git is a distributed version control system designed to track changes in source code during software development. It allows multiple developers to collaborate, maintain branches, revert to previous versions, and manage codebase history efficiently."
+  },
+  {
+    "question": "What is a Syntax Error vs a Runtime Error?",
+    "answer": "A Syntax Error occurs when code violates the grammar rules of the programming language, preventing it from compiling or executing. A Runtime Error occurs while the program is running, usually due to unexpected inputs or states (e.g., division by zero, null pointer exception)."
+  },
+  {
+    "question": "What is a WebSocket?",
+    "answer": "A WebSocket is a communication protocol that provides full-duplex, real-time, bi-directional communication channels over a single TCP connection. Unlike HTTP request-response, it allows the server to send data to the client proactively without polling."
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JSON (JavaScript Object Notation) is a lightweight, text-based data-interchange format that is easy for humans to read and write, and easy for machines to parse and generate. It represents data as key-value pairs and arrays."
+  },
+  {
+    "question": "What is CORS (Cross-Origin Resource Sharing)?",
+    "answer": "CORS is a browser security mechanism that restricts web pages from making requests to a different domain than the one that served the web page. Servers must include specific headers (like Access-Control-Allow-Origin) to permit cross-origin requests."
+  },
+  {
+    "question": "What is the difference between a List and a Tuple in Python?",
+    "answer": "Lists in Python are mutable, meaning their elements can be modified, added, or removed after creation, and are defined using square brackets []. Tuples are immutable sequences, meaning their contents cannot be changed after creation, and are defined using parentheses ()."
+  },
+  {
+    "question": "What is a Decorator in Python?",
+    "answer": "A Decorator is a design pattern in Python that allows you to modify or extend the behavior of a function or class without changing its source code. Decorators wrap another function, running code before and after the target function executes."
+  },
+  {
+    "question": "What is a Generator in Python?",
+    "answer": "A Generator is a special type of function in Python that returns an iterator object. It uses the 'yield' statement instead of 'return' to return values one at a time, suspended in memory, making it highly memory-efficient for processing large or infinite sequences."
+  },
+  {
+    "question": "What is the Global Interpreter Lock (GIL) in Python?",
+    "answer": "The Global Interpreter Lock (GIL) is a mutex used in CPython (the default Python implementation) that prevents multiple native threads from executing Python bytecodes at once. It ensures thread safety but limits multi-threaded CPU-bound performance."
+  },
+  {
+    "question": "What is List Comprehension in Python?",
+    "answer": "List Comprehension is a concise and readable way to create lists in Python. It offers a shorter syntax compared to using standard for-loops and append operations, often incorporating conditional logic in a single line."
+  },
+  {
+    "question": "What is SQL?",
+    "answer": "SQL (Structured Query Language) is the standard programming language used to manage, query, and manipulate relational databases. It organized data into structured tables with predefined schemas and relations."
+  },
+  {
+    "question": "What is NoSQL?",
+    "answer": "NoSQL refers to non-relational databases that store and retrieve data using structures other than traditional tabular schemas. Common types include document stores (e.g., MongoDB), key-value stores (e.g., Redis), column families, and graph databases."
+  },
+  {
+    "question": "What are the ACID properties in databases?",
+    "answer": "ACID is a set of properties that guarantee database transactions are processed reliably. It stands for Atomicity (all or nothing), Consistency (preserves rules), Isolation (independent execution), and Durability (permanent persistence)."
+  },
+  {
+    "question": "What is Database Normalization?",
+    "answer": "Normalization is a database design process used to organize data to minimize redundancy and improve data integrity. It involves dividing larger tables into smaller, well-structured tables and defining relationships between them. Common forms include 1NF, 2NF, 3NF, and BCNF."
+  },
+  {
+    "question": "What is a Database Index?",
+    "answer": "A Database Index is a data structure that improves the speed of data retrieval operations on a database table at the cost of additional write speed and storage space. It acts like a book index, allowing queries to find records without scanning the entire table."
+  },
+  {
+    "question": "What is Big O Notation?",
+    "answer": "Big O Notation is a mathematical notation used in computer science to describe the performance or complexity of an algorithm. It characterizes the worst-case execution time or space requirements of an algorithm relative to the size of the input data (N)."
+  },
+  {
+    "question": "What is the difference between an Array and a Linked List?",
+    "answer": "An Array stores elements in contiguous memory locations, allowing fast index-based access (O(1)) but slow insertions and deletions. A Linked List stores elements in nodes that point to the next node in memory, allowing fast insertions/deletions (O(1)) but slow sequential access (O(N))."
+  },
+  {
+    "question": "What is a Hash Table?",
+    "answer": "A Hash Table (or Hash Map) is a data structure that implements an associative array abstract data type, mapping keys to values. It uses a hash function to compute an index into an array of buckets, achieving extremely fast (O(1) average case) lookup, insertion, and deletion."
+  },
+  {
+    "question": "What is a Stack data structure?",
+    "answer": "A Stack is a linear data structure that follows the Last-In, First-Out (LIFO) principle. Elements are added (pushed) and removed (popped) from the same end, called the top. It is commonly used in undo mechanisms and function call call-stacks."
+  },
+  {
+    "question": "What is a Queue data structure?",
+    "answer": "A Queue is a linear data structure that follows the First-In, First-Out (FIFO) principle. Elements are added at the back (enqueue) and removed from the front (dequeue), mimicking a real-life waiting line."
+  },
+  {
+    "question": "What is Recursion?",
+    "answer": "Recursion is a programming technique where a function calls itself directly or indirectly to solve a problem. It breaks down a complex problem into smaller, similar sub-problems, and requires a base case to terminate execution and prevent infinite loops."
+  },
+  {
+    "question": "What is a CI/CD Pipeline?",
+    "answer": "A CI/CD (Continuous Integration / Continuous Deployment) pipeline is an automated workflow that developers use to build, test, and deploy software. It automates testing and deployment steps to ensure fast, reliable, and frequent software releases."
+  },
+  {
+    "question": "What is Cloud Computing?",
+    "answer": "Cloud Computing is the on-demand delivery of computing services, including servers, storage, databases, networking, software, and analytics, over the internet. Instead of owning servers, users rent computing infrastructure from providers like AWS, Google Cloud, or Azure."
+  },
+  {
+    "question": "What is Serverless Computing?",
+    "answer": "Serverless Computing is a cloud-computing execution model where the cloud provider dynamically manages the allocation and provisioning of machine resources. Developers write functions (e.g., AWS Lambda) and are billed only for the execution time, with no servers to maintain."
+  },
+  {
+    "question": "What is BERT?",
+    "answer": "BERT (Bidirectional Encoder Representations from Transformers) is a pre-trained NLP model developed by Google. Unlike traditional sequential models, BERT processes text bidirectionally, learning context from both left and right sides of a word, which revolutionized tasks like search and text classification."
+  },
+  {
+    "question": "What is GPT?",
+    "answer": "GPT (Generative Pre-trained Transformer) is a family of autoregressive decoder-only language models developed by OpenAI. GPT models generate text by predicting the next token in a sequence based on previous tokens, forming the basis for advanced conversational agents like ChatGPT."
+  },
+  {
+    "question": "What is the Self-Attention mechanism?",
+    "answer": "Self-Attention is an attention mechanism that relates different positions of a single sequence to compute a representation of the sequence. It allows models like Transformers to dynamically weigh the importance of all other words in a sentence relative to the target word, regardless of distance."
+  },
+  {
+    "question": "What is Bag of Words (BoW)?",
+    "answer": "Bag of Words is a simplifying representation used in NLP where text is represented as a bag (multiset) of its words, disregarding grammar, word order, and syntax, but keeping word frequency. It is a simple feature extraction method superseded by TF-IDF and embeddings."
+  },
+  {
+    "question": "What is Named Entity Recognition (NER)?",
+    "answer": "Named Entity Recognition is a subtask of information extraction in NLP that seeks to locate and classify named entities mentioned in unstructured text into predefined categories, such as person names, organizations, locations, medical codes, time expressions, and monetary values."
+  },
+  {
+    "question": "What is a JWT (JSON Web Token)?",
+    "answer": "A JSON Web Token is a compact, URL-safe means of representing claims to be transferred between two parties. The claims are digitally signed, enabling authentication and secure session state exchange without storing sessions on the server."
+  },
+  {
+    "question": "What is HTTPS?",
+    "answer": "HTTPS (Hypertext Transfer Protocol Secure) is an extension of HTTP used for secure communication over a computer network. It encrypts communication using Transport Layer Security (TLS/SSL) to protect data privacy and integrity against eavesdropping and tampering."
+  },
+  {
+    "question": "What is SQL Injection?",
+    "answer": "SQL Injection is a type of security vulnerability that occurs when malicious SQL code is inserted into database queries, often through user input fields. Attackers can exploit this vulnerability to bypass authentication, steal sensitive data, modify or delete data, or even take control of the database server."
+  },
+  {
+    "question": "What is Cross-Site Scripting (XSS)?",
+    "answer": "Cross-Site Scripting (XSS) is a web security vulnerability that allows attackers to inject malicious client-side scripts (usually JavaScript) into web pages viewed by other users. These scripts can steal user sessions, capture sensitive information, or perform unauthorized actions on behalf of the user."
+  },
+  {
+    "question": "What is the Document Object Model (DOM)?",
+    "answer": "The DOM is a programming interface for web documents. It represents the page structure as a hierarchical tree of nodes and objects, allowing programming languages (like JavaScript) to dynamically read, change, style, or manipulate page content and layout."
+  },
+  {
+    "question": "What is the difference between CSS Flexbox and CSS Grid?",
+    "answer": "CSS Flexbox is a one-dimensional layout model designed for aligning items either in columns or rows, making it ideal for component-level layouts. CSS Grid is a two-dimensional layout model designed for both columns and rows simultaneously, ideal for full-page structure designs."
+  },
+  {
+    "question": "What is Agile Methodology?",
+    "answer": "Agile is an iterative and incremental approach to software development and project management. It focuses on continuous feedback, collaboration, adaptive planning, and rapid delivery of high-quality software in small, manageable cycles."
+  },
+  {
+    "question": "What is Scrum?",
+    "answer": "Scrum is an Agile framework used to manage complex project development. It divides work into time-boxed iterations called 'Sprints' (usually 2 to 4 weeks long) and defines roles such as Product Owner, Scrum Master, and Development Team."
+  },
+  {
+    "question": "What is a Kanban Board?",
+    "answer": "A Kanban Board is an Agile project management tool designed to help visualize work, limit work-in-progress (WIP), and maximize efficiency. It uses cards, columns (e.g., To Do, In Progress, Done), and continuous improvement to manage workflows."
+  },
+  {
+    "question": "What is the difference between Git and GitHub?",
+    "answer": "Git is a local version control command-line tool used to track changes in code. GitHub is a cloud-based hosting service that stores Git repositories online and provides additional collaboration features, pull requests, and project management tools."
+  },
+  {
+    "question": "What is Git Merge vs Git Rebase?",
+    "answer": "Git Merge integrates branches by creating a new merge commit that joins histories together, preserving branch context. Git Rebase moves or combines a sequence of commits to a new base commit, creating a clean linear project history."
+  },
+  {
+    "question": "What is a Pull Request (PR)?",
+    "answer": "A Pull Request (PR) is a feature in Git repository hosting platforms (like GitHub or GitLab) that lets developers notify team members that they have completed a feature and want to merge their code changes from a branch into the main codebase, allowing code reviews."
+  },
+  {
+    "question": "What is REST?",
+    "answer": "REST (Representational State Transfer) is an architectural style for designing networked applications. It relies on a stateless, client-server communication model using standard HTTP methods (GET, POST, PUT, DELETE) to access and manipulate resources."
+  },
+  {
+    "question": "What is GraphQL?",
+    "answer": "GraphQL is an API query language and runtime developed by Facebook. It allows clients to define the exact structure of the data they need, preventing over-fetching or under-fetching and enabling requests of multiple resources in a single call."
+  },
+  {
+    "question": "What is a Session Cookie vs Local Storage?",
+    "answer": "Session Cookies store temporary data in the browser that is deleted when the browser is closed. Local Storage stores persistent data with no expiration date, remaining in the browser until explicitly cleared by the user or script."
+  },
+  {
+    "question": "What is a Virtual Machine (VM)?",
+    "answer": "A Virtual Machine is an emulation of a physical computer system. It runs an entire guest operating system on top of a hypervisor, which allocates physical hardware resources (CPU, RAM, storage) dynamically."
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Kubernetes (K8s) is an open-source container orchestration engine developed by Google. It automates the deployment, scaling, management, load-balancing, and self-healing of containerized applications (like Docker containers) across a cluster of servers."
+  },
+  {
+    "question": "What is a Microservice Architecture?",
+    "answer": "Microservices is an architectural style that structures an application as a collection of small, loosely coupled, and independently deployable services. Each service performs a specific business function and communicates via lightweight protocols like HTTP/REST or gRPC."
+  },
+  {
+    "question": "What is a Monolithic Architecture?",
+    "answer": "A Monolith is a traditional software architecture model where all components of the application (UI, business logic, database access) are built and deployed together as a single, unified database-backed executable or package."
+  },
+  {
+    "question": "What is a Data Lake vs a Data Warehouse?",
+    "answer": "A Data Lake stores raw, unstructured, semi-structured, or structured data at a massive scale without initial processing. A Data Warehouse stores cleaned, structured, and processed data optimized specifically for reporting, business intelligence, and analytical queries."
+  },
+  {
+    "question": "What is ETL?",
+    "answer": "ETL stands for Extract, Transform, Load. It is a data integration process that extracts data from multiple source systems, transforms it (cleansing, sorting, formatting), and loads it into a target system like a data warehouse."
+  },
+  {
+    "question": "What is a Relational Database Management System (RDBMS)?",
+    "answer": "An RDBMS is a database management system based on the relational model introduced by E.F. Codd. It stores data in tables (relations) with rows and columns and maintains relationships between tables using keys, queried using SQL."
+  },
+  {
+    "question": "What is a SQL Join?",
+    "answer": "A SQL Join is a clause used to combine rows from two or more tables based on a related column. Common joins include: INNER JOIN (matching rows in both), LEFT JOIN (all left and matching right), RIGHT JOIN (all right and matching left), and FULL JOIN (all rows)."
+  },
+  {
+    "question": "What is a Primary Key vs a Foreign Key?",
+    "answer": "A Primary Key is a column or set of columns that uniquely identifies each row in a database table. A Foreign Key is a column in one table that links to the primary key of another table, establishing and enforcing referential integrity between them."
+  },
+  {
+    "question": "What is the difference between a Compiler and an Interpreter?",
+    "answer": "A Compiler translates the entire high-level source code into machine code at once before execution, producing a fast standalone executable. An Interpreter translates and executes the source code line-by-line at runtime, making debugging easier but execution slower."
+  },
+  {
+    "question": "What is Object-Oriented Programming (OOP)?",
+    "answer": "OOP is a programming paradigm based on the concept of 'objects', which contain data (attributes) and code (methods). It focuses on organizing software design around data or objects rather than functions or logic."
+  },
+  {
+    "question": "What are the Four Pillars of OOP?",
+    "answer": "The four pillars of OOP are: Encapsulation (hiding internal state), Abstraction (hiding implementation complexity), Inheritance (reusing code from parent classes), and Polymorphism (allowing child classes to define unique actions under shared interfaces)."
+  },
+  {
+    "question": "What is the difference between Synchronous and Asynchronous programming?",
+    "answer": "Synchronous programming executes operations sequentially, blocking subsequent tasks until the current one finishes. Asynchronous programming allows operations to run independently in the background, executing tasks without blocking the main execution thread."
+  },
+  {
+    "question": "What is a Callback Function?",
+    "answer": "A Callback Function is a function passed as an argument to another function, intended to be executed or called back after the outer function finishes executing its task or an asynchronous operation completes."
+  },
+  {
+    "question": "What is a JavaScript Promise?",
+    "answer": "A JavaScript Promise is an object representing the eventual completion or failure of an asynchronous operation. It acts as a placeholder for a future value and can exist in one of three states: pending, fulfilled, or rejected."
+  },
+  {
+    "question": "What is an IP Address?",
+    "answer": "An IP (Internet Protocol) Address is a unique numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication. It identifies the host or network interface and provides the location of the device."
+  },
+  {
+    "question": "What is the difference between IPv4 and IPv6?",
+    "answer": "IPv4 uses a 32-bit address format (e.g., 192.168.1.1), providing about 4.3 billion unique addresses, which are now largely exhausted. IPv6 uses a 128-bit hexadecimal address format, providing a virtually infinite number of unique addresses (340 undecillion) to support the growth of internet devices."
+  },
+  {
+    "question": "What is DNS (Domain Name System)?",
+    "answer": "DNS is a hierarchical database system that translates human-readable domain names (like google.com) into numerical IP addresses (like 142.250.190.46) that computers use to identify each other on the network. It acts as the phonebook of the internet."
+  },
+  {
+    "question": "What is a Firewall?",
+    "answer": "A Firewall is a network security device that monitors and filters incoming and outgoing network traffic based on an organization's previously established security policies. It acts as a barrier between a trusted internal network and an untrusted external network (like the internet)."
+  },
+  {
+    "question": "What is the difference between Symmetric and Asymmetric Encryption?",
+    "answer": "Symmetric Encryption uses the same single key for both encrypting and decrypting data, making it fast but challenging to share the key securely. Asymmetric Encryption uses a pair of keys: a public key for encryption (shared with anyone) and a private key for decryption (kept secret), which is more secure but slower."
+  },
+  {
+    "question": "What is the difference between Hashing and Encryption?",
+    "answer": "Encryption is a two-way function used to scramble data so it cannot be read without a key, and it can be decrypted back to its original form. Hashing is a one-way mathematical function that converts data into a fixed-length string (hash value) that cannot be reversed, commonly used for password verification."
+  },
+  {
+    "question": "What is MFA (Multi-Factor Authentication)?",
+    "answer": "MFA is a security mechanism that requires a user to provide two or more verification factors to gain access to a resource, such as a password (something you know), a temporary code sent to a phone (something you have), or a fingerprint (something you are)."
+  },
+  {
+    "question": "What is Single Sign-On (SSO)?",
+    "answer": "Single Sign-On is an authentication scheme that allows a user to log in with a single set of credentials (username and password) to gain access to multiple independent software systems or applications, improving user experience and administrative control."
+  },
+  {
+    "question": "What is OAuth 2.0?",
+    "answer": "OAuth 2.0 is an industry-standard delegation protocol for authorization. It allows third-party applications to obtain limited access to a user's account on an HTTP service (like Google or GitHub) without sharing the user's login credentials."
+  },
+  {
+    "question": "What is a CDN (Content Delivery Network)?",
+    "answer": "A CDN is a geographically distributed group of servers that work together to provide fast delivery of internet content. By caching static files (like images, CSS, and JS) closer to users' physical locations, it reduces page load times and server bandwidth usage."
+  },
+  {
+    "question": "What is Load Balancing?",
+    "answer": "Load Balancing is the process of distributing network or application traffic across multiple servers in a server pool. It ensures no single server bears too much demand, improving application responsiveness, scalability, and availability."
+  },
+  {
+    "question": "What is High Availability (HA)?",
+    "answer": "High Availability refers to systems designed to operate continuously without failure for a long period. HA is achieved by eliminating single points of failure, implementing redundant hardware/software, and using automatic failover mechanisms."
+  },
+  {
+    "question": "What is Disaster Recovery (DR)?",
+    "answer": "Disaster Recovery is a set of policies, tools, and procedures to enable the recovery or continuation of vital technology infrastructure and systems following a natural or human-induced disaster. It focuses on backup restoration and failover data centers."
+  },
+  {
+    "question": "What is the difference between Vertical and Horizontal Scaling?",
+    "answer": "Vertical Scaling (scaling up) means adding more power (CPU, RAM, storage) to an existing server. Horizontal Scaling (scaling out) means adding more servers to the system resource pool, which is generally more scalable and fault-tolerant."
+  },
+  {
+    "question": "What is Caching?",
+    "answer": "Caching is the process of storing copies of data in a temporary storage location (called a cache) so that future requests for that data can be served much faster. It reduces database load and network latency."
+  },
+  {
+    "question": "What is Redis?",
+    "answer": "Redis (Remote Dictionary Server) is an open-source, in-memory key-value data structure store. It is extremely fast and widely used as a database, cache, message broker, and queue, supporting data structures like strings, hashes, lists, and sets."
+  },
+  {
+    "question": "What is MongoDB?",
+    "answer": "MongoDB is a popular open-source, document-oriented NoSQL database. It stores data in flexible, JSON-like BSON documents, meaning fields can vary from document to document and data structures can be changed over time."
+  },
+  {
+    "question": "What is a Graph Database?",
+    "answer": "A Graph Database is a NoSQL database that uses graph structures with nodes, edges, and properties to represent and store data. It is optimized for storing and querying highly interconnected data, such as social networks or recommendation engines."
+  },
+  {
+    "question": "What is a Data Pipeline?",
+    "answer": "A Data Pipeline is a series of data processing steps where raw data is ingested from various sources, processed, transformed, and moved to a destination storage system (like a data warehouse or data lake) for analysis."
+  },
+  {
+    "question": "What is Apache Kafka?",
+    "answer": "Apache Kafka is an open-source distributed event streaming platform. It is designed to handle high-throughput, real-time data feeds, allowing applications to publish, subscribe to, store, and process streams of records in a fault-tolerant manner."
+  },
+  {
+    "question": "What is a Container Registry?",
+    "answer": "A Container Registry is a repository or collection of repositories used to store and manage container images (like Docker images). Popular registries include Docker Hub, Amazon ECR, and Google Container Registry."
+  },
+  {
+    "question": "What is Infrastructure as Code (IaC)?",
+    "answer": "Infrastructure as Code is the management and provisioning of infrastructure (servers, networks, load balancers) through machine-readable definition files (like Terraform or CloudFormation) rather than physical hardware configuration or interactive configuration tools."
+  },
+  {
+    "question": "What is the difference between Stateful and Stateless applications?",
+    "answer": "Stateful applications store user session data and state locally on the server, requiring requests to be routed to the same server. Stateless applications do not store state on the server, allowing any request to be processed by any server, making horizontal scaling much easier."
+  },
+  {
+    "question": "What is a Message Queue?",
+    "answer": "A Message Queue is a form of asynchronous service-to-service communication used in serverless and microservices architectures. Messages are stored in the queue until they are processed and deleted by a consuming service, enabling decoupling of systems."
+  },
+  {
+    "question": "What is the difference between encryption in transit and encryption at rest?",
+    "answer": "Encryption in Transit protects data as it travels across network connections (e.g., using HTTPS/TLS) to prevent interception. Encryption at Rest protects data while it is stored on physical media like SSDs, HDDs, or databases (e.g., using AES-256) to prevent unauthorized reading of files."
+  },
+  {
+    "question": "What is the difference between a Module and a Package in Python?",
+    "answer": "A Module is a single Python file containing executable code and definitions (functions, classes). A Package is a directory containing multiple modules and an '__init__.py' file, allowing for hierarchical structuring of module namespaces."
+  },
+  {
+    "question": "What is the difference between a Shallow Copy and a Deep Copy in Python?",
+    "answer": "A Shallow Copy constructs a new compound object and inserts references to the original nested objects. A Deep Copy recursively copies everything, constructing a new compound object and inserting copies of the original nested objects, making it completely independent."
+  },
+  {
+    "question": "What is a Context Manager in Python?",
+    "answer": "A Context Manager is a Python object that defines the runtime context to be established when executing a 'with' statement. It handles automatic setup and teardown resources, such as opening and closing files or database connections safely."
+  },
+  {
+    "question": "What is the purpose of a virtual environment (venv) in Python?",
+    "answer": "A Virtual Environment is an isolated directory tree that contains its own Python installation and set of libraries. It prevents dependency conflicts between different projects by keeping their packages completely separate."
+  },
+  {
+    "question": "What is PEP 8?",
+    "answer": "PEP 8 is the official Style Guide for Python Code. It provides guidelines and best practices on how to write clean, readable, and consistent Python code, covering topics like indentation, naming conventions, and line lengths."
+  },
+  {
+    "question": "What is Unit Testing?",
+    "answer": "Unit Testing is a software testing method where individual units or components of source code (like functions or classes) are tested in isolation to determine if they behave exactly as expected, helping catch bugs early in development."
+  },
+  {
+    "question": "What is the difference between the 'is' and '==' operators in Python?",
+    "answer": "The '==' operator checks for equality, evaluating if the values of two objects are equal. The 'is' operator checks for identity, evaluating if two variables point to the exact same object (same memory address) in memory."
+  },
+  {
+    "question": "What are *args and **kwargs in Python?",
+    "answer": "*args allows a function to accept any number of positional arguments as a tuple. **kwargs allows a function to accept any number of keyword arguments as a dictionary, making functions highly flexible."
+  },
+  {
+    "question": "What is a Lambda function in Python?",
+    "answer": "A Lambda function is a small, anonymous, single-expression function in Python. It is defined using the 'lambda' keyword, can take any number of arguments, but can only have one expression, and returns its evaluation automatically."
+  },
+  {
+    "question": "What is the difference between Local and Global variables?",
+    "answer": "A Local variable is declared inside a function and can only be accessed within that function's scope. A Global variable is declared outside all functions and can be accessed and modified throughout the entire program."
+  },
+  {
+    "question": "What are CSS Variables?",
+    "answer": "CSS Variables (Custom Properties) are entities defined by CSS authors that contain specific values to be reused throughout a document. They are declared using '--variable-name' and accessed using the 'var()' function, enabling easy theme changes."
+  },
+  {
+    "question": "What is Web Accessibility (A11y)?",
+    "answer": "Web Accessibility means designing and developing websites, tools, and technologies so that people with disabilities can perceive, understand, navigate, interact with, and contribute to the web effectively."
+  },
+  {
+    "question": "What is Event Bubbling in JavaScript?",
+    "answer": "Event Bubbling is a phase of event propagation in the HTML DOM where an event starts from the deepest target element and bubbles up through its ancestors (parents) in the DOM tree to the topmost window object."
+  },
+  {
+    "question": "What is Event Capturing in JavaScript?",
+    "answer": "Event Capturing (or trickling) is a phase of event propagation in the HTML DOM where the event starts from the window object and trickles down through ancestor elements to the target element that triggered the event."
+  },
+  {
+    "question": "What is Event Delegation in JavaScript?",
+    "answer": "Event Delegation is a design pattern in JavaScript where a single event listener is attached to a parent element to manage events for all of its current and future children, leveraging event bubbling to improve memory usage."
+  },
+  {
+    "question": "What is the difference between Fetch API and Axios?",
+    "answer": "Fetch API is built into modern browsers but requires manual handling of response JSON conversion and HTTP errors. Axios is a popular third-party library that automatically transforms JSON data and handles errors and requests cancellation."
+  },
+  {
+    "question": "What is the OSI Model?",
+    "answer": "The OSI (Open Systems Interconnection) Model is a conceptual framework that standardizes network communication into seven layers: Physical, Data Link, Network, Transport, Session, Presentation, and Application Layers."
+  },
+  {
+    "question": "What is the difference between TCP and UDP?",
+    "answer": "TCP is a connection-oriented protocol that guarantees delivery, ordering, and error-checking of data packets, ideal for websites/emails. UDP is a connectionless protocol that sends packets without checking delivery, making it faster but less reliable, ideal for gaming/streaming."
+  },
+  {
+    "question": "What is a VPN (Virtual Private Network)?",
+    "answer": "A VPN is a service that establishes a secure, encrypted connection between your device and the internet. It routes your internet traffic through a private server, hiding your IP address and encrypting your data to protect your online privacy."
+  },
+  {
+    "question": "What are common HTTP Status Codes?",
+    "answer": "Common HTTP status codes include: 200 OK (success), 301 Moved Permanently (redirect), 400 Bad Request (client error), 401 Unauthorized (auth required), 403 Forbidden (no permission), 404 Not Found (missing), and 500 Internal Server Error (server error)."
+  },
+  {
+    "question": "What are common Network Port numbers?",
+    "answer": "Common port numbers include: 80 for HTTP, 443 for HTTPS, 22 for SSH, 21 for FTP, 3306 for MySQL, 5432 for PostgreSQL, and 27017 for MongoDB."
+  },
+  {
+    "question": "What is a CDN Edge Server?",
+    "answer": "A CDN Edge Server is a computer located at the boundary (edge) of a Content Delivery Network. It stores cached copies of static assets closer to end-users, serving their requests locally to minimize network latency."
+  },
+  {
+    "question": "What is a Serverless Cold Start?",
+    "answer": "A Cold Start is the delay that occurs when a serverless function is invoked after being idle. The cloud provider must spin up a new container instance, load the application code, and initialize the runtime environment before executing."
+  },
+  {
+    "question": "What is Database Replication?",
+    "answer": "Database Replication is the process of maintaining multiple copies (replicas) of the same database on different servers or locations. It is used to improve availability (if one server fails, others can take over), scalability (by distributing read load), and fault tolerance."
+  },
+  {
+    "question": "What is Database Sharding?",
+    "answer": "Sharding is a database partitioning technique that horizontal splits a large database into smaller, more manageable pieces called shards. Each shard contains a subset of the data, often based on a shard key (e.g., customer ID ranges), allowing data to be distributed across multiple servers for better scalability and performance."
+  },
+  {
+    "question": "What is Connection Pooling?",
+    "answer": "Connection Pooling is a technique used to manage database connections efficiently by maintaining a cache of pre-established database connections. Instead of creating a new connection for each request (which is resource-intensive), the application borrows a connection from the pool, uses it, and then returns it to the pool for reuse. This significantly reduces connection overhead, improves response times, and conserves database resources."
+  },
+  {
+    "question": "What is a Prepared Statement in SQL?",
+    "answer": "A Prepared Statement is a feature used to execute SQL statements repeatedly with high efficiency and security. It compiles the SQL query template first, then inserts parameters later, completely preventing SQL Injection attacks."
+  },
+  {
+    "question": "What is a Database Migration?",
+    "answer": "A Database Migration is a version-control system for databases. It allows developers to define, track, and deploy changes to the database schema (like adding tables or modifying columns) consistently across different environments."
+  },
+  {
+    "question": "What is the difference between ACID and BASE properties?",
+    "answer": "ACID properties (used in SQL databases) prioritize strict data consistency, predictability, and accuracy. BASE properties (Basically Available, Soft state, Eventual consistency, used in NoSQL) prioritize scalability, availability, and speed over instant consistency."
+  },
+  {
+    "question": "What is Ensemble Learning?",
+    "answer": "Ensemble Learning is a machine learning technique that combines predictions from multiple individual models (weak learners) to generate a single, more accurate and robust prediction. Examples include Random Forest and Gradient Boosting."
+  },
+  {
+    "question": "What is the difference between Bagging and Boosting?",
+    "answer": "Bagging trains multiple independent models in parallel and averages their predictions (e.g., Random Forest). Boosting trains models sequentially, where each new model focuses on correcting the errors made by previous models (e.g., Gradient Boosting)."
+  },
+  {
+    "question": "What is XGBoost?",
+    "answer": "XGBoost (Extreme Gradient Boosting) is an optimized, highly efficient distributed gradient boosting library. It is designed to be highly scalable and fast, incorporating advanced regularization techniques to prevent overfitting in tabular datasets."
+  },
+  {
+    "question": "What is AdaBoost?",
+    "answer": "AdaBoost (Adaptive Boosting) is a sequential ensemble method that starts by training a weak model (like a single-split decision tree, or stump) and assigns higher weights to misclassified training instances, forcing subsequent models to focus on hard cases."
+  },
+  {
+    "question": "What is Data Leakage in Machine Learning?",
+    "answer": "Data Leakage occurs when information from outside the training dataset (such as target labels or validation data features) is inadvertently used to train the model, resulting in overly optimistic training performance but poor generalization."
+  },
+  {
+    "question": "What is Normalization vs Standardization in feature scaling?",
+    "answer": "Normalization scales features to a fixed range, typically [0, 1]. Standardization shifts features to have a mean of 0 and a standard deviation of 1. Normalization is ideal for algorithms like KNN, while Standardization handles outliers better."
+  },
+  {
+    "question": "What is SMOTE?",
+    "answer": "SMOTE (Synthetic Minority Over-sampling Technique) is a data preprocessing technique used to address class imbalance. Instead of duplicating existing minority class records, it generates synthetic new examples along the line segments joining k-nearest neighbors."
+  },
+  {
+    "question": "What is the ROC-AUC Curve?",
+    "answer": "The ROC (Receiver Operating Characteristic) curve plots the True Positive Rate against the False Positive Rate at various classification thresholds. The AUC (Area Under the Curve) measures the model's ability to distinguish between positive and negative classes."
+  },
+  {
+    "question": "What is the Singleton Design Pattern?",
+    "answer": "The Singleton is a creational design pattern that restricts the instantiation of a class to one single instance. It provides a global point of access to that instance, commonly used for database connection configurations or logging."
+  },
+  {
+    "question": "What is the Factory Design Pattern?",
+    "answer": "The Factory Method is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created, decoupling instantiation logic from object usage."
+  },
+  {
+    "question": "What is the Observer Design Pattern?",
+    "answer": "The Observer is a behavioral design pattern where an object (the subject) maintains a list of dependents (observers) and notifies them automatically of any state changes, commonly used in event-driven systems and UI frameworks."
+  },
+  {
+    "question": "What is Blue-Green Deployment?",
+    "answer": "Blue-Green deployment is a release strategy that minimizes downtime and risk by running two identical production environments: Blue (active) and Green (new release). Traffic is switched instantly to Green once testing succeeds, with easy rollback."
+  },
+  {
+    "question": "What is a Canary Deployment?",
+    "answer": "A Canary deployment is a release strategy where a new version of software is rolled out to a small subset of users (e.g., 5%) first. If no errors are detected, the new version is gradually rolled out to the rest of the user base."
+  },
+  {
+    "question": "What is a Web Server vs an Application Server?",
+    "answer": "A Web Server handles HTTP requests and serves static content (HTML, CSS, JS, images). An Application Server exposes business logic and dynamic content to clients, managing server-side scripts (Python, Node.js) and database integrations."
+  },
+  {
+    "question": "What is a Reverse Proxy?",
+    "answer": "A Reverse Proxy is a server that sits in front of backend web servers and forwards client requests to them. It is used to implement load balancing, enhance security, handle SSL termination, and cache content to speed up response times."
+  },
+  {
+    "question": "What is Penetration Testing?",
+    "answer": "Penetration Testing (or pen testing) is a simulated cyberattack against your computer system, network, or web application to identify exploitable security vulnerabilities before malicious hackers can find and exploit them."
+  },
+  {
+    "question": "What is the difference between Authentication and Authorization?",
+    "answer": "Authentication is the process of verifying who a user is (e.g., logging in with a username/password). Authorization is the process of verifying what specific files, data, or permissions that authenticated user has access to."
+  },
+  {
+    "question": "What is a Denial of Service (DoS) attack?",
+    "answer": "A DoS attack is a cyberattack in which the perpetrator seeks to make a machine or network resource unavailable to its intended users by temporarily or indefinitely disrupting services, typically by flooding the target with excessive traffic."
+  },
+  {
+    "question": "What is a CSRF (Cross-Site Request Forgery) attack?",
+    "answer": "CSRF is a vulnerability where an attacker tricks an authenticated user's browser into executing an unwanted action on a trusted website where they are logged in, leveraging the browser's automatic sending of session cookies."
+  },
+  {
+    "question": "What is SSL/TLS?",
+    "answer": "SSL (Secure Sockets Layer) and its successor TLS (Transport Layer Security) are cryptographic protocols designed to provide secure, encrypted communications over a computer network, preventing eavesdropping and tampering of HTTP traffic."
+  },
+  {
+    "question": "What is an Active-Active vs Active-Passive configuration?",
+    "answer": "In Active-Active, all redundant nodes actively process incoming traffic simultaneously, providing load balancing and high availability. In Active-Passive, only one primary node processes traffic while backup nodes remain idle, ready to take over (failover) if the primary fails."
+  },
+  {
+    "question": "What is DNS Spoofing?",
+    "answer": "DNS Spoofing (or DNS cache poisoning) is a cyberattack where malicious DNS data is introduced into a DNS resolver's cache, causing the resolver to return an incorrect IP address and diverting traffic to an attacker's computer or fake website."
+  },
+  {
+    "question": "What is DDoS?",
+    "answer": "DDoS (Distributed Denial of Service) is a malicious attempt to disrupt the normal traffic of a targeted server, service, or network by overwhelming the target or its surrounding infrastructure with a flood of internet traffic from multiple compromised computer systems (botnets)."
+  },
+  {
+    "question": "What is a Phishing attack?",
+    "answer": "Phishing is a type of social engineering attack where cybercriminals send fraudulent messages (often emails or text messages) designed to look like they are from a trusted entity to trick victims into revealing sensitive information, like credit card numbers or credentials."
+  },
+  {
+    "question": "What is Social Engineering?",
+    "answer": "Social Engineering is the psychological manipulation of people into performing actions or divulging confidential information. Rather than exploiting technical software bugs, it exploits human cognitive biases and trust."
+  },
+  {
+    "question": "What is a Digital Signature?",
+    "answer": "A Digital Signature is a mathematical scheme used to validate the authenticity and integrity of a digital document, message, or software. It guarantees that the message was created by a known sender and was not altered in transit."
+  },
+  {
+    "question": "What is a Digital Certificate?",
+    "answer": "A Digital Certificate is an electronic document issued by a Certificate Authority (CA) that binds a public key to an identity (such as a website or person). It is used to prove ownership of a public key, enabling secure, encrypted HTTPS connections."
+  },
+  {
+    "question": "What is Public Key Infrastructure (PKI)?",
+    "answer": "PKI is a set of roles, policies, hardware, software, and procedures needed to create, manage, distribute, use, store, and revoke digital certificates and manage public-key encryption. It establishes trust in digital communication."
+  },
+  {
+    "question": "What is End-to-End Encryption (E2EE)?",
+    "answer": "E2EE is a system of secure communication where only the communicating users can read the messages. It prevents third parties, including internet service providers, telecom providers, and the communication server itself, from accessing the cryptographic keys."
+  },
+  {
+    "question": "What is Salting in password hashing?",
+    "answer": "Salting is the addition of a unique, random string of characters (a salt) to a password before hashing it. This ensures that identical passwords result in different hash values, preventing hackers from using precomputed tables (rainbow tables) to crack passwords."
+  },
+  {
+    "question": "What is Token-Based Authentication?",
+    "answer": "Token-Based Authentication is a security protocol where users verify their identity and receive a unique security token (like a JWT) in return. For subsequent requests, the client sends this token to the server to access resources, eliminating server-side session state."
+  },
+  {
+    "question": "What is Session Hijacking?",
+    "answer": "Session Hijacking (or cookie hijacking) is a cyberattack where an attacker steals or guesses a user's session identifier (session ID) to impersonate the user and gain unauthorized access to an active web application session."
+  },
+  {
+    "question": "What is a Man-in-the-Middle (MITM) attack?",
+    "answer": "A MITM attack occurs when an attacker secretly relays and possibly alters communications between two parties who believe they are directly communicating with each other. It allows the attacker to intercept and steal sensitive data or inject malicious payloads."
+  },
+  {
+    "question": "What is Input Validation?",
+    "answer": "Input Validation is the practice of checking and sanitizing user inputs before processing them in an application. It ensures that input data conforms to expected formats, types, and lengths, preventing vulnerabilities like SQL Injection and Cross-Site Scripting."
+  },
+  {
+    "question": "What is Cross-Site Scripting (XSS) prevention?",
+    "answer": "XSS prevention involves practices like context-aware output encoding (escaping data before rendering it in HTML), implementing a Content Security Policy (CSP), validating and sanitizing user input, and using modern framework features that auto-escape output."
+  },
+  {
+    "question": "What is Content Security Policy (CSP)?",
+    "answer": "CSP is an HTTP response header that helps site operators restrict the resources (such as JavaScript, CSS, Images) that the browser is allowed to load for a given page. It is a powerful tool to detect and mitigate XSS and data injection attacks."
+  },
+  {
+    "question": "What is Rate Limiting?",
+    "answer": "Rate Limiting is a technique used to control the rate of traffic sent or received by a network interface or web API. It limits the number of requests a user can make within a given timeframe (e.g., 60 requests per minute), preventing server overload and abuse."
+  },
+  {
+    "question": "What is a CAPTCHA?",
+    "answer": "CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart) is a security challenge-response test used to determine whether a user is human or an automated bot, protecting registration forms and login pages from spam."
+  },
+  {
+    "question": "What are OAuth 2.0 Grant Types?",
+    "answer": "OAuth 2.0 grant types (or flows) define how an application can obtain an access token. Common types include Authorization Code Flow (for web apps), Client Credentials Flow (for machine-to-machine APIs), and Implicit/Resource Owner Password flows."
+  },
+  {
+    "question": "What is OpenID Connect (OIDC)?",
+    "answer": "OIDC is a simple identity layer built on top of the OAuth 2.0 framework. While OAuth 2.0 handles authorization (granting access), OIDC handles authentication (verifying identity), allowing clients to verify the identity of an end-user."
+  },
+  {
+    "question": "What is SAML?",
+    "answer": "SAML (Security Assertion Markup Language) is an XML-based open standard for exchanging authentication and authorization data between an identity provider (IdP) and a service provider (SP), widely used for enterprise single sign-on (SSO)."
+  },
+  {
+    "question": "What is a Threat Model?",
+    "answer": "A Threat Model is a structured process for identifying, analyzing, and mitigating potential security threats and vulnerabilities in a system or application during the design phase, allowing security to be built-in rather than added later."
+  },
+  {
+    "question": "What is Static Application Security Testing (SAST)?",
+    "answer": "SAST is a white-box testing methodology where code is analyzed from the inside out in a non-running state. It scans the source code, byte code, or binary files to find security vulnerabilities, code defects, and style guide violations."
+  },
+  {
+    "question": "What is Dynamic Application Security Testing (DAST)?",
+    "answer": "DAST is a black-box testing methodology that analyzes a running application from the outside in. It simulates external attacks on a deployed application, testing inputs, endpoints, and responses to identify security issues like SQLi and XSS."
+  },
+  {
+    "question": "What is Vulnerability Scanning?",
+    "answer": "Vulnerability Scanning is an automated process that identifies and reports known security vulnerabilities, misconfigurations, and outdated software packages within a computer system, network, or application dependencies."
+  },
+  {
+    "question": "What is Patch Management?",
+    "answer": "Patch Management is the process of distributing and applying updates (patches) to software, firmware, and operating systems. It is critical for fixing bugs, addressing security vulnerabilities, and ensuring system stability."
+  },
+  {
+    "question": "What is Zero-Trust Security?",
+    "answer": "Zero-Trust is a security framework based on the premise 'never trust, always verify'. It requires continuous authentication, authorization, and validation of all users, devices, and network paths before granting access to applications and data."
+  },
+  {
+    "question": "What is a Software Bill of Materials (SBOM)?",
+    "answer": "An SBOM is a formal, structured record containing details and supply chain relationships of various components (libraries, packages, modules) used in building a software application, helping manage dependency security and license compliance."
+  },
+  {
+    "question": "What is a Key Management Service (KMS)?",
+    "answer": "A KMS is a cloud or software service used to create, manage, distribute, and rotate cryptographic keys. It allows applications to encrypt and decrypt sensitive data securely without exposing raw keys to developers or servers."
+  },
+  {
+    "question": "What is Cloud Security Posture Management (CSPM)?",
+    "answer": "CSPM is a set of IT security tools designed to identify misconfigurations and compliance risks in cloud environments (like AWS or Azure). It continuously monitors cloud services to ensure they adhere to security best practices."
+  },
+  {
+    "question": "What is Identity and Access Management (IAM)?",
+    "answer": "IAM is a framework of policies and technologies to ensure that the right individuals and systems have appropriate access to technology resources. It manages user identities, roles, permissions, and group policies."
+  },
+  {
+    "question": "What is a Service Level Agreement (SLA)?",
+    "answer": "An SLA is a formal commitment between a service provider and a client. It defines the service standards (such as uptime, performance, or response time) the provider must meet, along with financial or legal penalties if they fail."
+  },
+  {
+    "question": "What is a Service Level Objective (SLO)?",
+    "answer": "An SLO is a specific target reliability level for a service, agreed upon within a team. For example, a service might set an SLO of 99.9% uptime per month, which acts as a metric to measure performance against the SLA."
+  },
+  {
+    "question": "What is a Service Level Indicator (SLI)?",
+    "answer": "An SLI is a quantitative measure of a service's performance in real-time. Common examples include request latency, error rate, throughput, and system availability. SLIs are used to determine if a service is meeting its SLOs."
+  },
+  {
+    "question": "What is Mean Time to Repair (MTTR)?",
+    "answer": "MTTR is a metric representing the average time required to troubleshoot, fix, and restore a failed system or service to full functionality after an outage or incident occurs."
+  },
+  {
+    "question": "What is Mean Time Between Failures (MTBF)?",
+    "answer": "MTBF is a metric representing the average elapsed time between inherent failures of a system during normal system operation. It is a key indicator of a system's reliability and stability."
+  },
+  {
+    "question": "What is a Root Cause Analysis (RCA)?",
+    "answer": "An RCA is a structured problem-solving method used to identify the underlying reasons (root causes) for a system failure, incident, or bug. The goal is to implement permanent fixes to prevent the issue from recurring."
+  },
+  {
+    "question": "What is a Blameless Postmortem?",
+    "answer": "A Blameless Postmortem is a site reliability engineering (SRE) practice where a team reviews a system failure or outage without pointing fingers or blaming individuals. It focuses on finding process and system flaws to prevent future issues."
+  },
+  {
+    "question": "What is Site Reliability Engineering (SRE)?",
+    "answer": "SRE is a discipline that incorporates aspects of software engineering and applies them to infrastructure and operations problems. The goal is to create ultra-scalable, reliable, and automated software systems."
+  },
+  {
+    "question": "What is the difference between Monitoring and Observability?",
+    "answer": "Monitoring tells you *when* a system fails by tracking predefined metrics (e.g., CPU load, error rates). Observability allows you to understand *why* it failed by analyzing internal states through logs, metrics, and traces (telemetry data)."
+  },
+  {
+    "question": "What is Log Aggregation?",
+    "answer": "Log Aggregation is the process of collecting, standardizing, and centralizing log files from multiple servers, services, and containers into a single location (like Elasticsearch) for easy searching, visualization, and debugging."
+  },
+  {
+    "question": "What is Distributed Tracing?",
+    "answer": "Distributed Tracing is a diagnostic method used to track the path and latency of user requests as they flow through multiple microservices, databases, and third-party APIs, helping identify performance bottlenecks."
+  },
+  {
+    "question": "What is Application Performance Monitoring (APM)?",
+    "answer": "APM is the monitoring and management of software application performance, availability, and user experience. APM tools track transaction response times, database queries, memory leaks, and application exceptions."
+  },
+  {
+    "question": "What is a Metric in SRE?",
+    "answer": "A Metric is a numeric value measured over time, representing a system's performance, resource utilization, or health (e.g., memory usage percentage, requests per second, active connections)."
+  },
+  {
+    "question": "What is Alerting?",
+    "answer": "Alerting is the automated process of detecting when a metric crosses a critical threshold or violates an SLO, and notifying the appropriate on-call engineer (e.g., via SMS or PagerDuty) to address the issue immediately."
+  },
+  {
+    "question": "What is PagerDuty?",
+    "answer": "PagerDuty is an incident management platform that aggregates alerts from monitoring tools and routes them to on-call signals based on escalation policies, enabling rapid response to outages."
+  },
+  {
+    "question": "What is Chaos Engineering?",
+    "answer": "Chaos Engineering is the discipline of experimenting on a software system in production to build confidence in the system's capability to withstand turbulent and unexpected conditions. It involves intentionally introducing failures (like shutting down servers) to test resilience."
+  },
+  {
+    "question": "What is a Runbook or Playbook?",
+    "answer": "A Runbook is a compilation of routine procedures, operations, and troubleshooting steps written by SREs and system administrators. It helps on-call engineers quickly diagnose and resolve system alerts and outages."
+  },
+  {
+    "question": "What is Capacity Planning?",
+    "answer": "Capacity Planning is the process of determining the technology infrastructure (compute, storage, network) required to meet future application demands, preventing performance degradation and server resource exhaustion."
+  },
+  {
+    "question": "What is the difference between a hot standby and a cold standby?",
+    "answer": "A Hot Standby is a redundant server that runs in parallel with the primary server, receives real-time data replication, and can take over instantly with zero downtime. A Cold Standby is a backup server that is powered off or not running, requiring manual intervention, configuration, and boot time to take over after a primary server failure."
+  },
+  {
+    "question": "What is a Database Transaction?",
+    "answer": "A database transaction is a single logical unit of work that comprises one or more database operations (like reads or writes). Transactions are processed in an all-or-nothing manner, meaning either all operations within the transaction are completed successfully, or none of them are."
+  },
+  {
+    "question": "Explain the ACID properties of transactions.",
+    "answer": "ACID is a set of properties that guarantee database transactions are processed reliably. **Atomicity** ensures all or none of the operations complete. **Consistency** ensures the transaction brings the database from one valid state to another. **Isolation** ensures concurrent transactions do not interfere with each other. **Durability** ensures that once a transaction is committed, its changes are permanent and survive system failures."
+  },
+  {
+    "question": "What is a 2PC (Two-Phase Commit)?",
+    "answer": "Two-Phase Commit (2PC) is a distributed algorithm used to ensure atomicity in transactions that span multiple nodes. It consists of two phases: the **Prepare Phase** (the coordinator asks all participants if they are ready to commit) and the **Commit Phase** (if all participants agree, the coordinator tells them to commit; otherwise, it tells them to abort)."
+  },
+  {
+    "question": "What is Replication in databases?",
+    "answer": "Replication is the process of maintaining multiple copies (replicas) of the same database on different servers or locations. It is used to improve availability (if one server fails, others can take over), scalability (by distributing read load), and fault tolerance."
+  },
+  {
+    "question": "What are Database Indexes?",
+    "answer": "Indexes are special data structures (typically B-Trees) that improve the speed of data retrieval operations on a database table. They work like an index in a book, allowing the database system to quickly locate rows without scanning the entire table. While indexes speed up SELECT queries, they add overhead to INSERT, UPDATE, and DELETE operations because the index must also be updated."
+  },
+  {
+    "question": "What is a Deadlock in databases?",
+    "answer": "A deadlock occurs when two or more transactions are blocked indefinitely, each waiting for the other to release a resource that it needs. For example, Transaction A holds Resource 1 and waits for Resource 2, while Transaction B holds Resource 2 and waits for Resource 1. Deadlocks can be prevented using strategies like resource ordering, timeouts, or deadlock detection mechanisms."
+  },
+  {
+    "question": "How do you prevent Deadlocks?",
+    "answer": "Deadlocks can be prevented using several strategies: 1) **Resource Ordering**: Enforcing a global order in which resources are acquired. 2) **Timeout**: Setting a maximum wait time for transactions. 3) **Deadlock Detection**: Implementing algorithms (likeWait-for Graphs) to detect deadlocks and abort one or more transactions to resolve them. 4) **No-Wait/Wound-Wait Policies**: Implementing specific protocols to handle resource contention."
+  },
+  {
+    "question": "What is a Foreign Key?",
+    "answer": "A Foreign Key is a column or a set of columns in a database table that refers to the primary key of another table. It is used to establish and enforce a link between the data in two tables, maintaining referential integrity and defining relationships (e.g., one-to-many)."
+  },
+  {
+    "question": "What is the difference between an Inner Join and a Left Join?",
+    "answer": "An **Inner Join** returns only the rows that have matching values in both tables. A **Left Join** (or Left Outer Join) returns all rows from the left table, and the matching rows from the right table. If there is no match in the right table, NULL values are returned for the right table's columns."
+  },
+  {
+    "question": "What are Stored Procedures?",
+    "answer": "Stored Procedures are precompiled SQL code blocks stored in the database. They can accept input parameters, perform complex operations (including control flow and error handling), and return results. They are used to enforce business logic, improve performance (due to precompilation), and enhance security."
+  },
+  {
+    "question": "What is a Trigger?",
+    "answer": "A Trigger is a special type of stored procedure that automatically executes or 'fires' when a specific event occurs in the database, such as an INSERT, UPDATE, or DELETE operation on a table. They are commonly used for enforcing complex business rules, maintaining data integrity, or auditing."
+  },
+  {
+    "question": "What is the difference between VARCHAR and CHAR data types?",
+    "answer": "Both store character strings, but **CHAR** uses fixed-length storage (padding with spaces if the data is shorter than the declared length), while **VARCHAR** uses variable-length storage (storing only the characters entered plus a length indicator). VARCHAR is more space-efficient for varying string lengths, whereas CHAR is slightly faster for fixed-length data."
+  },
+  {
+    "question": "What is a Clustered Index?",
+    "answer": "A Clustered Index determines the physical order in which data is stored in a table. A table can have only one clustered index because the data rows themselves can only be stored in one physical order. It is typically created on the primary key and significantly speeds up data retrieval for range scans and sorted data."
+  },
+  {
+    "question": "What is a Non-Clustered Index?",
+    "answer": "A Non-Clustered Index is a separate data structure from the table data. It contains pointers to the actual data rows, sorted by the indexed column values. A table can have multiple non-clustered indexes, but they require extra storage space and add overhead to data modification operations."
+  },
+  {
+    "question": "What is Row-Level Security (RLS)?",
+    "answer": "RLS is a security feature that restricts which rows a user can access within a table based on specific criteria (e.g., user roles, permissions, or tenant IDs). The database engine enforces these restrictions automatically at the row level, ensuring data privacy and multi-tenancy security."
+  },
+  {
+    "question": "What is Query Tuning or Query Optimization?",
+    "answer": "Query Tuning is the process of analyzing and modifying SQL queries to improve their performance and reduce execution time. It involves using execution plans, adding appropriate indexes, rewriting complex joins, and minimizing data retrieval."
+  },
+  {
+    "question": "What is Data Warehousing?",
+    "answer": "Data Warehousing is the process of collecting, storing, and managing data from multiple sources to provide meaningful business insights. Data warehouses are designed for analysis and reporting (OLAP) rather than transaction processing (OLTP)."
+  },
+  {
+    "question": "What is the difference between OLTP and OLAP?",
+    "answer": "OLTP (Online Transaction Processing) systems are designed for fast, concurrent transaction processing (e.g., order entry, banking). OLAP (Online Analytical Processing) systems are designed for complex analysis and reporting on large volumes of data (e.g., business intelligence)."
+  },
+  {
+    "question": "What is a Data Mart?",
+    "answer": "A Data Mart is a subset of a data warehouse focused on a specific functional area or business line (e.g., sales, marketing, finance). It provides data tailored to the needs of a specific group of users, making analysis more targeted and efficient."
+  },
+  {
+    "question": "What are Columnar Databases?",
+    "answer": "Columnar Databases store data column by column rather than row by row. This is highly efficient for analytical queries (OLAP) that often aggregate data across many rows but only for a few columns, resulting in better compression and faster query performance compared to traditional row-oriented databases."
+  },
+  {
+    "question": "What is Database Encryption at Rest?",
+    "answer": "Database Encryption at Rest refers to encrypting the data while it is stored on disk (e.g., in data files, logs, backups). This protects sensitive information from unauthorized access even if the physical storage media is stolen or accessed without permission."
+  },
+  {
+    "question": "What is Database Encryption in Transit?",
+    "answer": "Database Encryption in Transit refers to encrypting data while it is being transmitted between a client application and the database server, or between database servers (e.g., during replication). This is typically achieved using protocols like TLS/SSL to prevent eavesdropping and man-in-the-middle attacks."
+  },
+  {
+    "question": "What is the difference between Encryption and Hashing?",
+    "answer": "**Encryption** is a two-way process used to protect data confidentiality. Encrypted data can be decrypted back to its original form using a key. **Hashing**, on the other hand, is a one-way process that converts data into a fixed-size string (hash value). Hash values cannot be reversed to retrieve the original data and are primarily used for integrity verification and password storage."
+  },
+  {
+    "question": "What is Query Tuning?",
+    "answer": "Query Tuning is the process of optimizing SQL queries to improve their performance and reduce execution time. It involves analyzing query execution plans, adding appropriate indexes, rewriting inefficient queries, and minimizing data retrieval."
+  },
+  {
+    "question": "What is a Query Plan or Execution Plan?",
+    "answer": "A Query Plan (or Execution Plan) is the step-by-step execution strategy generated by the database query optimizer to execute a SQL query. It shows how the database will access the data, including join methods, index usage, and sort operations."
+  },
+  {
+    "question": "What are Database Snapshots?",
+    "answer": "Database Snapshots are read-only, point-in-time views of a database at a specific moment. They are created quickly and consume minimal storage initially, making them useful for reporting, testing, and backup purposes without affecting the performance of the primary database."
+  },
+  {
+    "question": "What are Materialized Views?",
+    "answer": "Materialized Views are database objects that store the pre-computed results of a query. Unlike regular views, which execute the query every time they are accessed, Materialized Views store the actual data physically and need to be periodically refreshed to reflect changes in the base tables. They are widely used to optimize complex analytical queries."
+  },
+  {
+    "question": "What is Query Result Caching?",
+    "answer": "Query Result Caching is a technique where the results of frequently executed queries are stored in memory or a cache. When the same query is executed again, the database can return the cached result directly without re-execution of the query, significantly improving performance for read-heavy workloads."
+  },
+  {
+    "question": "What are Database Migrations?",
+    "answer": "Database Migrations are structured changes applied to a database schema or its data. They are typically used to evolve the database design over time, add new tables, modify columns, or update data as application requirements change. Migrations are usually version-controlled and can be applied and rolled back systematically."
+  },
+  {
+    "question": "What is Zero-Downtime Migration?",
+    "answer": "Zero-Downtime Migration is a strategy for migrating a database or application to a new system without interrupting its availability to users. It typically involves techniques like blue-green deployment, rolling upgrades, or live migration with dual-writes to ensure continuous service availability during the transition."
+  },
+  {
+    "question": "What is a Database Transaction Log?",
+    "answer": "A Transaction Log (or Redo Log) is a critical component of a database management system that records every transaction or change made to the database. It is used to recover the database to a consistent state in case of hardware or software failures, by replaying committed transactions (redo) or undoing uncommitted ones (undo)."
+  },
+  {
+    "question": "What is Change Data Capture (CDC)?",
+    "answer": "Change Data Capture (CDC) is a technology used to track and capture changes made to data in a database. It identifies inserted, updated, and deleted rows, often by reading transaction logs, and makes this change data available for other systems to consume. CDC is widely used for real-time data integration, replication, and analytics."
+  },
+  {
+    "question": "What are Database Constraints?",
+    "answer": "Database Constraints are rules enforced on data columns to ensure data integrity and validity. Common constraints include PRIMARY KEY (uniquely identifies each row), FOREIGN KEY (enforces referential integrity between tables), NOT NULL (ensures a column cannot have NULL values), UNIQUE (ensures all values in a column are unique), and CHECK (ensures values meet specific criteria)."
+  },
+  {
+    "question": "What are Database Roles?",
+    "answer": "Database Roles are named collections of database privileges that can be assigned to users. Instead of granting permissions to individual users, administrators can assign roles (e.g., 'read-only', 'admin', 'developer') to users, simplifying permission management and ensuring consistent access control."
+  },
+  {
+    "question": "What is Database Security Auditing?",
+    "answer": "Database Security Auditing is the process of monitoring and recording database activities, such as user logins, data access, privilege changes, and administrative operations. It helps organizations detect suspicious activities, enforce compliance with security policies, and meet regulatory requirements."
+  },
+  {
+    "question": "How do you prevent SQL Injection attacks?",
+    "answer": "SQL Injection attacks can be prevented using several measures: 1) **Parameterized Queries (Prepared Statements)**: Use parameterized queries instead of concatenating user input directly into SQL strings. 2) **Input Validation**: Validate and sanitize all user inputs to ensure they conform to expected formats. 3) **Principle of Least Privilege**: Grant database users only the minimum necessary privileges. 4) **Web Application Firewalls (WAFs)**: Use WAFs to detect and block common SQL injection patterns."
+  },
+  {
+    "question": "How do you prevent XSS attacks?",
+    "answer": "XSS attacks can be prevented using: 1) **Input Validation and Output Encoding**: Validate and sanitize all user inputs, and encode all user-supplied data before rendering it in web pages. 2) **Content Security Policy (CSP)**: Implement CSP headers to control which resources (scripts, styles, images) the browser is allowed to load. 3) **HTTP-only Cookies**: Use the HttpOnly flag for cookies to prevent JavaScript from accessing them. 4) **Sanitization**: Use robust HTML sanitization libraries to remove potentially malicious content."
+  },
+  {
+    "question": "What is Multi-tenancy in databases?",
+    "answer": "Multi-tenancy is an architecture where a single instance of a database (or database server) serves multiple tenants (customers or organizations). Each tenant's data is isolated and remains invisible to other tenants, while all tenants share the same database infrastructure. It provides cost savings and easier management compared to single-tenant architectures."
+  },
+  {
+    "question": "What are the different multi-tenant isolation approaches?",
+    "answer": "There are three main multi-tenant isolation approaches: 1) **Separate Databases**: Each tenant has its own dedicated database instance. This provides maximum isolation but is costly. 2) **Shared Database, Separate Schemas**: All tenants share the same database, but each has its own schema. This offers good isolation with moderate cost. 3) **Shared Database, Shared Schema**: All tenants share the same database and schema, with a 'tenant_id' column to distinguish data. This is the most cost-effective but requires careful query design to ensure isolation."
+  },
+  {
+    "question": "What are Index-Organized Tables (IOT)?",
+    "answer": "An Index-Organized Table (IOT) is a special type of table where the data is stored physically in the same order as the primary key index. Essentially, the table data itself is stored within the leaf nodes of the primary key index, eliminating the need for a separate table structure. IOTs are efficient for range scans on the primary key but may have different performance characteristics for non-indexed columns compared to traditional heap tables."
+  },
+  {
+    "question": "What is Data Normalization?",
+    "answer": "Normalization is a database design process used to organize data to minimize redundancy and improve data integrity. It involves dividing larger tables into smaller, well-structured tables and defining relationships between them. Common forms include 1NF, 2NF, 3NF, and BCNF (Boyce-Codd Normal Form)."
+  },
+  {
+    "question": "What is Denormalization?",
+    "answer": "Denormalization is the process of intentionally introducing redundancy into a normalized database design, typically by combining tables or adding redundant data. It is done to improve query performance by reducing the number of joins required, especially for complex analytical queries. Denormalization is a trade-off between data integrity (favored by normalization) and query performance (favored by denormalization)."
+  },
+  {
+    "question": "What are Views in SQL?",
+    "answer": "Views are virtual tables based on the result-set of a SQL statement. They do not store data themselves but rather provide a way to look at data from one or more tables in a specific, simplified, or restricted format. Views can be used to simplify complex queries, enforce security by restricting access to certain columns or rows, and provide backward compatibility when table structures change."
+  },
+  {
+    "question": "What is a Materialized View?",
+    "answer": "A Materialized View is a database object that stores the pre-computed results of a query. Unlike regular views, which execute the query every time they are accessed, Materialized Views store the actual data physically and need to be periodically refreshed to reflect changes in the base tables. They are widely used to optimize complex analytical queries by pre-calculating and storing results."
+  },
+  {
+    "question": "What is Locking in databases?",
+    "answer": "Locking is a concurrency control mechanism used in databases to manage simultaneous access to data by multiple transactions. When a transaction needs to access data, it acquires a lock to prevent other transactions from modifying it, thus ensuring data consistency. Locks can be shared (for reading) or exclusive (for writing), and various locking strategies exist, such as two-phase locking, to manage concurrency effectively."
+  },
+  {
+    "question": "What is Optimistic Concurrency Control (OCC)?",
+    "answer": "Optimistic Concurrency Control (OCC) is a concurrency control method that assumes conflicts between transactions are rare. Instead of locking data upfront, OCC allows transactions to proceed without acquiring locks. Before committing, it checks if any conflicts have occurred (e.g., if data has been modified by another transaction). If a conflict is detected, the transaction is rolled back and retried. OCC is particularly useful in read-heavy systems where conflicts are infrequent."
+  },
+  {
+    "question": "What is Pessimistic Concurrency Control (PCC)?",
+    "answer": "Pessimistic Concurrency Control (PCC) is a concurrency control method that assumes conflicts are likely and uses locking to prevent them. When a transaction needs to access data, it acquires a lock, thereby blocking other transactions from accessing or modifying that data until the lock is released. While PCC ensures data consistency, it can lead to reduced concurrency and potential deadlocks."
+  },
+  {
+    "question": "How do you prevent deadlocks in databases?",
+    "answer": "Deadlocks can be prevented using several strategies: 1) **Resource Ordering**: Enforcing a global order in which resources are acquired. 2) **Timeout**: Setting a maximum wait time for transactions. 3) **Deadlock Detection**: Implementing algorithms (likeWait-for Graphs) to detect deadlocks and abort one or more transactions to resolve them. 4) **No-Wait/Wound-Wait Policies**: Implementing specific protocols to handle resource contention."
+  },
+  {
+    "question": "What are the different types of database replication?",
+    "answer": "There are several types of database replication: 1) **Snapshot Replication**: Creates a static copy of the data at a specific point in time. 2) **Transactional Replication**: Replicates transactions (INSERT, UPDATE, DELETE) as they occur, ensuring near real-time synchronization. 3) **Merge Replication**: Allows data to be modified at multiple locations and then merged together when connections are re-established. 4) **Log Shipping**: Copies transaction logs from the primary server to secondary servers."
+  },
+  {
+    "question": "What are the SOLID principles in software design?",
+    "answer": "SOLID is an acronym for five software design principles: 1) **Single Responsibility Principle** (a class should have one reason to change). 2) **Open/Closed Principle** (software entities should be open for extension, closed for modification). 3) **Liskov Substitution Principle** (subtypes must be substitutable for their base types). 4) **Interface Segregation Principle** (clients shouldn't be forced to depend on interfaces they do not use). 5) **Dependency Inversion Principle** (depend on abstractions, not concretions)."
+  },
+  {
+    "question": "What does the DRY principle stand for?",
+    "answer": "DRY stands for **Don't Repeat Yourself**. It is a software development principle aimed at reducing repetition of software patterns, replacing it with abstractions or using data normalization to avoid redundancy."
+  },
+  {
+    "question": "What does the KISS principle stand for?",
+    "answer": "KISS stands for **Keep It Simple, Stupid**. It is a design principle stating that systems work best if they are kept simple rather than made complex; therefore, simplicity should be a key goal in design and unnecessary complexity should be avoided."
+  },
+  {
+    "question": "What does the YAGNI principle stand for?",
+    "answer": "YAGNI stands for **You Aren't Gonna Need It**. It is a principle of Extreme Programming (XP) that states a programmer should not add functionality until deemed absolutely necessary, avoiding wasted time on features that might never be used."
+  },
+  {
+    "question": "What is Garbage Collection?",
+    "answer": "Garbage Collection is an automatic memory management process in programming runtimes (like Java, Python, or JavaScript). It identifies and reclaims memory allocated to objects that are no longer referenced or reachable by the program."
+  },
+  {
+    "question": "What is a Memory Leak?",
+    "answer": "A Memory Leak is a resource leak that occurs when a computer program incorrectly manages memory allocations, failing to release memory that is no longer needed, which can eventually lead to system slowdowns or crashes due to memory exhaustion."
+  },
+  {
+    "question": "What is the difference between a Process and a Thread?",
+    "answer": "A **Process** is an independent execution unit with its own dedicated memory space, CPU registers, and resource handles allocated by the OS. A **Thread** is the smallest unit of execution within a process, sharing the parent process's memory space and resources, making thread creation and communication faster but vulnerable to concurrency issues."
+  },
+  {
+    "question": "What is a Race Condition?",
+    "answer": "A Race Condition is an undesirable situation that occurs when a device or system attempts to perform two or more operations at the same time, but because of the nature of the device or system, the operations must be done in the proper sequence to be done correctly."
+  },
+  {
+    "question": "What is a Mutex vs a Semaphore?",
+    "answer": "A **Mutex** (Mutual Exclusion) is a locking mechanism used to synchronize access to a resource, allowing only one thread to acquire the lock at any time. A **Semaphore** is a signaling mechanism that uses a counter to control access to a shared resource pool by multiple threads, allowing up to N threads simultaneously."
+  },
+  {
+    "question": "What is a Livelock?",
+    "answer": "A Livelock is a situation where two or more processes continuously change their state in response to changes in the other processes without doing any useful work. Unlike a deadlock, the processes are active and running, but stuck in an infinite state change loop."
+  },
+  {
+    "question": "What is the Virtual DOM?",
+    "answer": "The Virtual DOM is a programming concept where an ideal, or virtual, representation of a user interface is kept in memory and synced with the real DOM by a library (such as React) via a process called reconciliation, which minimizes expensive direct DOM manipulations."
+  },
+  {
+    "question": "What is a React Hook?",
+    "answer": "A React Hook is a special function that lets developers hook into React state and lifecycle features from functional components, allowing state management and side effects without writing class components."
+  },
+  {
+    "question": "What is a Single Page Application (SPA)?",
+    "answer": "An SPA is a web application or website that interacts with the user by dynamically rewriting the current web page with new data from the web server, instead of the default browser method of loading entire new pages, providing a smoother user experience."
+  },
+  {
+    "question": "What is Server-Side Rendering (SSR)?",
+    "answer": "SSR is a web application deployment method where the server generates the full HTML markup for a page on each request and sends it to the browser, allowing search engine crawlers to index the content easily and reducing initial page load times."
+  },
+  {
+    "question": "What is Static Site Generation (SSG)?",
+    "answer": "SSG is a web development method where HTML pages are pre-rendered and generated at build time rather than on demand. The resulting static files can be served instantly from a CDN, offering maximum speed, security, and scalability."
+  },
+  {
+    "question": "What is Hydration in web frameworks?",
+    "answer": "Hydration is the client-side process where a JavaScript framework (like React or Vue) scans a pre-rendered HTML page received from the server, attaches event listeners, and binds dynamic states to the static elements, making the page interactive."
+  },
+  {
+    "question": "What is a Progressive Web App (PWA)?",
+    "answer": "A PWA is a type of application software delivered through the web, built using common web technologies including HTML, CSS, and JavaScript. It is designed to work on any platform that uses a standards-compliant browser, offering native-like features such as offline support, push notifications, and home screen installation."
+  },
+  {
+    "question": "What is Edge Computing?",
+    "answer": "Edge Computing is a distributed computing paradigm that brings computation and data storage closer to the sources of data (such as IoT devices or local edge servers) rather than relying solely on a centralized cloud database center, reducing latency and bandwidth use."
+  },
+  {
+    "question": "What is a Service Mesh?",
+    "answer": "A Service Mesh is a dedicated infrastructure layer for facilitating secure, fast, and reliable service-to-service communication in microservices architectures, typically managed via sidecar proxies (like Envoy) running alongside services."
+  },
+  {
+    "question": "What is an API Gateway?",
+    "answer": "An API Gateway is a reverse proxy that sits between clients and microservices. It acts as a single entry point, routing requests, enforcing security (authentication, authorization), rate limiting, caching, and aggregating API responses."
+  },
+  {
+    "question": "What is Infrastructure Drift?",
+    "answer": "Infrastructure Drift occurs when the actual state of deployed infrastructure resources deviates from the defined configuration state (e.g., in Terraform files), usually caused by manual changes or ad-hoc updates made outside the IaC pipeline."
+  },
+  {
+    "question": "What is GitOps?",
+    "answer": "GitOps is an operational framework that takes DevOps best practices used for software development, such as version control, collaboration, compliance, and CI/CD, and applies them to infrastructure automation, using Git as the single source of truth."
+  },
+  {
+    "question": "What is Ransomware?",
+    "answer": "Ransomware is a type of malware from cryptovirology that threatens to publish the victim's personal data or perpetually block access to it unless a ransom is paid, typically using symmetric or asymmetric encryption to lock files."
+  },
+  {
+    "question": "What is a Rootkit?",
+    "answer": "A Rootkit is a collection of computer software, typically malicious, designed to enable access to a computer or an area of its software that is not otherwise allowed (for example, to an unauthorized user) and often masks its existence from detection."
+  },
+  {
+    "question": "What is LLM Quantization?",
+    "answer": "LLM Quantization is a model compression technique that reduces the precision of model weights (e.g., converting 16-bit floating-point weights to 8-bit or 4-bit integers), enabling LLMs to run on consumer hardware with minimal accuracy loss."
+  },
+  {
+    "question": "What is Model Fine-Tuning?",
+    "answer": "Model Fine-Tuning is the process of taking a pre-trained machine learning model and training it further on a smaller, specific dataset to adapt it for a particular task or domain, updating the model's weights to learn specialized patterns."
+  },
+  {
+    "question": "What is a Hallucination in large language models?",
+    "answer": "A Hallucination is a phenomenon where a generative AI model (such as an LLM) produces output that is coherent and grammatically correct but factually incorrect or completely fabricated, not grounded in its training data or input context."
+  },
+  {
+    "question": "What is the difference between a Linter and a Formatter?",
+    "answer": "A **Linter** analyzes source code to identify programmatic errors, bugs, code smells, and stylistic deviations (e.g., ESLint). A **Formatter** focuses purely on code styling, automatically rewriting files to enforce a consistent layout and spacing style (e.g., Prettier)."
+  },
+  {
+    "question": "What is a Module Bundler?",
+    "answer": "A Module Bundler is a tool (such as Webpack, Vite, or Rollup) that takes frontend source files (JavaScript, CSS, Images) and dependency graphs, and compiles them into optimized, unified files that can be loaded efficiently in the browser."
+  },
+  {
+    "question": "What is the difference between npm, yarn, and pnpm?",
+    "answer": "**npm** is the default package manager for Node.js. **yarn** was created to address speed and security gaps in npm, introducing lockfiles. **pnpm** is a highly efficient package manager that uses a content-addressable store and hard links, preventing duplicate downloads."
+  },
+  {
+    "question": "What is CSS BEM methodology?",
+    "answer": "BEM stands for **Block, Element, Modifier**. It is a popular naming convention for CSS classes designed to make HTML/CSS code more readable, maintainable, and modular by structuring names as `.block__element--modifier`."
+  },
+  {
+    "question": "What is Semantic Versioning (SemVer)?",
+    "answer": "Semantic Versioning is a versioning standard for software packages using a three-part number format: **MAJOR.MINOR.PATCH**. MAJOR changes indicate breaking API changes, MINOR indicates backward-compatible features, and PATCH indicates backward-compatible bug fixes."
+  },
+  {
+    "question": "What is Technical Debt?",
+    "answer": "Technical Debt is a concept in software development that reflects the implied cost of additional rework caused by choosing an easy, quick solution now instead of using a better, well-designed approach that would take longer."
+  },
+  {
+    "question": "What is Test-Driven Development (TDD)?",
+    "answer": "TDD is a software development process where developers write automated test cases before writing the actual functional code. The cycle consists of: write a failing test, write code to make the test pass, and then refactor the code (Red-Green-Refactor)."
+  },
+  {
+    "question": "What is Behavior-Driven Development (BDD)?",
+    "answer": "BDD is an extension of TDD that focuses on user behavior and business requirements. It uses human-readable, domain-specific language (often using Given-When-Then syntax in Cucumber/Gherkin) to write test specifications that non-technical team members can understand."
+  },
+  {
+    "question": "What is Continuous Integration (CI)?",
+    "answer": "CI is a DevOps practice where developers frequently merge their code changes into a central repository. Each merge triggers automated builds and tests to verify code quality and identify bugs early in the release cycle."
+  },
+  {
+    "question": "What is Continuous Delivery (CD)?",
+    "answer": "Continuous Delivery (CD) is a DevOps practice where code changes are automatically built, tested, and prepared for release to production. It ensures that the software can be reliably deployed to production at any time, often requiring manual approval to release."
+  },
+  {
+    "question": "What is a Webhook?",
+    "answer": "A Webhook (or reverse API) is a method of altering or customizing the behavior of a web page or application with custom callbacks. It allows applications to send real-time data to other applications in response to specific events via HTTP POST requests."
+  },
+  {
+    "question": "What is the difference between a GET and a POST request?",
+    "answer": "A **GET** request retrieves data from a specified resource, passing parameters in the URL query string, making it visible and cacheable. A **POST** request submits data to be processed to a specified resource, passing data in the request body, making it ideal for creating resources."
+  },
+  {
+    "question": "What is a PUT vs a PATCH request?",
+    "answer": "A **PUT** request replaces the target resource entirely with the request payload. A **PATCH** request applies partial modifications to a resource, sending only the fields that need to be changed."
+  },
+  {
+    "question": "What is the purpose of HTTP Headers?",
+    "answer": "HTTP Headers allow the client and the server to pass additional information with an HTTP request or response. They cover metadata like content types, encoding, authorization credentials, cache control directives, and cookies."
+  },
+  {
+    "question": "What is the difference between Local Storage and Session Storage?",
+    "answer": "**Local Storage** stores persistent key-value data in the client's browser with no expiration date, remaining until cleared. **Session Storage** stores key-value data temporarily, which is automatically deleted when the page session ends (the browser tab is closed)."
+  },
+  {
+    "question": "What is an iFrame?",
+    "answer": "An iFrame (Inline Frame) is an HTML document embedded inside another HTML document on a website. It allows content from external websites or documents to be loaded and displayed within a designated area of the host page."
+  },
+  {
+    "question": "What is SEO (Search Engine Optimization)?",
+    "answer": "SEO is the practice of optimizing a website to improve its visibility and ranking in organic (non-paid) search engine results pages (SERPs), focusing on speed, metadata, structured markup, content keywords, and mobile responsiveness."
+  },
+  {
+    "question": "What is a Sitemap?",
+    "answer": "A Sitemap is an XML or HTML file that lists all the pages, videos, and files on a website, indicating their relationships and update frequency, helping search engine web crawlers (like Googlebot) index the site more intelligently."
+  },
+  {
+    "question": "What is the difference between a 301 and a 302 redirect?",
+    "answer": "A **301 Redirect** indicates that a page has permanently moved to a new URL, instructing search engines to transfer link equity to the new page. A **302 Redirect** indicates that a page has moved temporarily, instructing search engines to keep the old URL indexed."
+  }
+]
