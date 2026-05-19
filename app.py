@@ -8,6 +8,10 @@ from flask import Flask, request, jsonify, render_template
 # Setup local NLTK directory to avoid permission issues in cloud environments like Render
 import nltk
 
+# Download required resources
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
 base_dir = os.path.dirname(os.path.abspath(__file__))
 nltk_data_path = os.path.join(base_dir, 'nltk_data')
 if not os.path.exists(nltk_data_path):
