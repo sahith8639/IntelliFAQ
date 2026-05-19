@@ -94,8 +94,8 @@ graph TD
 ### Steps
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/sahith8639/CodeAlpha_FAQ_Chatbot.git
-   cd CodeAlpha_FAQ_Chatbot
+   git clone https://github.com/sahith8639/IntelliFAQ.git
+   cd IntelliFAQ
    ```
    *(Note: Replace with your actual GitHub username if different)*
 
