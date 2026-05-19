@@ -207,6 +207,6 @@ This project is pre-configured for seamless hosting on **Render** (or Heroku).
 ## 👨‍💻 Internship Project Details
 - **Internship**: CodeAlpha Artificial Intelligence Internship
 - **Task**: Task 2 - Chatbot for FAQs
-- **Author**: Sahith
+- **Author**: Sahith Sai Pasupula
 - **GitHub**: [sahith8639 Profile](https://github.com/sahith8639)
 - **Repository**: [CodeAlpha_FAQ_Chatbot](https://github.com/sahith8639/IntelliFAQ)
