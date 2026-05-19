@@ -94,8 +94,8 @@ graph TD
 ### Steps
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/sahith8639/CodeAlpha_FAQ_Chatbot.git
-   cd CodeAlpha_FAQ_Chatbot
+   git clone https://github.com/sahith8639/IntelliFAQ.git
+   cd IntelliFAQ
    ```
    *(Note: Replace with your actual GitHub username if different)*
 
@@ -207,6 +207,6 @@ This project is pre-configured for seamless hosting on **Render** (or Heroku).
 ## 👨‍💻 Internship Project Details
 - **Internship**: CodeAlpha Artificial Intelligence Internship
 - **Task**: Task 2 - Chatbot for FAQs
-- **Author**: Sahith
+- **Author**: Sahith Sai Pasupula
 - **GitHub**: [sahith8639 Profile](https://github.com/sahith8639)
 - **Repository**: [CodeAlpha_FAQ_Chatbot](https://github.com/sahith8639/IntelliFAQ)
